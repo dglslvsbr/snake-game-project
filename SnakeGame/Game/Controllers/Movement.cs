@@ -1,4 +1,4 @@
-﻿namespace SnakeGame.Game.Entities
+﻿namespace SnakeGame.Game.Controllers
 {
     internal class Movement
     {
