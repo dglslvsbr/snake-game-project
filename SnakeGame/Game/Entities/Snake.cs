@@ -3,21 +3,24 @@
     internal class Snake
     {
         private readonly List<Snake> _segments = new();
-        private readonly Image _image;
-        private const int _size = 20;
+        private const int _size = 10;
+        private int _score;
         public int X { get; set; }
         public int Y { get; set; }
 
         public Snake(int x, int y)
         {
-            _image = Image.FromFile(@"Utility/PNG/Snake.png");
             X = x;
             Y = y;
         }
 
         public List<Snake> List() => _segments;
         public static int Size => _size;
-        public Image Image => _image;
+        public int Placar
+        {
+            get => _score;
+            set => _score = value;
+        }
         public void MoveUp() => Y--;
         public void MoveDown() => Y++;
         public void MoveLeft() => X--;

@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Game\Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Utility\Ico\256xSnake.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -23,9 +19,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Utility\Ico\48xSnake.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Utility\PNG\Snake.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

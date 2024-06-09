@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             Map = new PictureBox();
-            Score = new Label();
             CountFood = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)Map).BeginInit();
@@ -46,23 +45,12 @@
             Map.TabIndex = 0;
             Map.TabStop = false;
             // 
-            // Score
-            // 
-            Score.AutoSize = true;
-            Score.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Score.ForeColor = Color.White;
-            Score.Location = new Point(2, 9);
-            Score.Name = "Score";
-            Score.Size = new Size(88, 22);
-            Score.TabIndex = 1;
-            Score.Text = "Score: 0";
-            // 
             // CountFood
             // 
             CountFood.AutoSize = true;
             CountFood.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
             CountFood.ForeColor = Color.White;
-            CountFood.Location = new Point(283, 9);
+            CountFood.Location = new Point(178, 8);
             CountFood.Name = "CountFood";
             CountFood.Size = new Size(26, 29);
             CountFood.TabIndex = 2;
@@ -71,7 +59,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(247, 5);
+            pictureBox1.Location = new Point(136, 5);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(36, 34);
             pictureBox1.TabIndex = 3;
@@ -85,7 +73,6 @@
             ClientSize = new Size(334, 311);
             Controls.Add(pictureBox1);
             Controls.Add(CountFood);
-            Controls.Add(Score);
             Controls.Add(Map);
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -103,7 +90,6 @@
         #endregion
 
         private PictureBox Map;
-        private Label Score;
         private Label CountFood;
         private PictureBox pictureBox1;
     }
