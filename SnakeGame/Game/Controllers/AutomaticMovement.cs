@@ -1,4 +1,6 @@
-﻿namespace SnakeGame.Game.Entities
+﻿using SnakeGame.Game.Controllers;
+
+namespace SnakeGame.Game.Entities
 {
     internal class AutomaticMovement
     {

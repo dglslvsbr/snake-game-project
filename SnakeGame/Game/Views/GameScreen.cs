@@ -10,6 +10,7 @@ namespace SnakeGame.Game.Views
         private readonly AutomaticMovement _automaticMovement;
         private readonly Food _food;
         private readonly GenerateFood _generateFood;
+        private readonly EndGame _endGame;
         private readonly System.Windows.Forms.Timer _timer;
 
         public GameScreen()
@@ -21,6 +22,7 @@ namespace SnakeGame.Game.Views
             _automaticMovement = new(_snake, _movement);
             _food = new(200, 200);
             _generateFood = new(_snake, _food, CountFood);
+            _endGame = new(_snake, this);
             _timer = new()
             {
                 Interval = 10
@@ -30,6 +32,7 @@ namespace SnakeGame.Game.Views
 
             Eventos();
         }
+
         private void Eventos()
         {
             Map.Paint += DrawOnScreen;
@@ -52,6 +55,7 @@ namespace SnakeGame.Game.Views
             Map.Focus();
             _automaticMovement.MoveAutomatically();
             _generateFood.Generate();
+            _endGame.End();
         }
     }
 }

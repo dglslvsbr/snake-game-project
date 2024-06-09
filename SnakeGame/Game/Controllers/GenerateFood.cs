@@ -7,8 +7,9 @@ namespace SnakeGame.Game.Controllers
         private readonly Snake _snake;
         private readonly Food _food;
         private readonly Label _score;
-        private const int MapWidth = 300;
-        private const int MapHeight = 250;
+        private const int MapWidth = 329;
+        private const int MapHeight = 268;
+        private const int Size = 20;
 
         public GenerateFood(Snake snake, Food food, Label foods)
         {
@@ -26,15 +27,15 @@ namespace SnakeGame.Game.Controllers
 
             for (int i = 0; i < list.Count; i++)
             {
-                if (list[0].X + 20 >= _food.X &&
-                   list[0].X <= _food.X + 20 &&
-                   list[0].Y + 20 >= _food.Y &&
-                   list[0].Y <= _food.Y + 20)
+                if (list[0].X + Size >= _food.X &&
+                   list[0].X <= _food.X + Size &&
+                   list[0].Y + Size >= _food.Y &&
+                   list[0].Y <= _food.Y + Size)
                 {
                     do
                     {
-                        x = random.Next(MapWidth);
-                        y = random.Next(MapHeight);
+                        x = random.Next(MapWidth - Size);
+                        y = random.Next(MapHeight - Size);
                     } while (IsPositionOnSnake(x, y));
 
                     IncreaseFood();
@@ -69,9 +70,8 @@ namespace SnakeGame.Game.Controllers
             int quantity = 10;
             for (int i = 0; i < quantity; i++)
             {
-                list.Add(new Snake(_snake.X, _snake.Y));
+                list.Add(new Snake(_snake.X - 500, _snake.Y - 500));
             }
-            
         }
     }
 }
