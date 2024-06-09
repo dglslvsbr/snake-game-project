@@ -5,6 +5,7 @@
         private readonly List<Snake> _segments = new();
         private const int _size = 10;
         private int _score;
+        private int _speed = 1;
         public int X { get; set; }
         public int Y { get; set; }
 
@@ -21,9 +22,14 @@
             get => _score;
             set => _score = value;
         }
-        public void MoveUp() => Y--;
-        public void MoveDown() => Y++;
-        public void MoveLeft() => X--;
-        public void MoveRight() => X++;
+        public int Speed
+        {
+            get => _speed;
+            set => _speed = value;
+        }
+        public void MoveUp() => Y -= _speed;
+        public void MoveDown() => Y+= _speed;
+        public void MoveLeft() => X -= _speed;
+        public void MoveRight() => X += _speed;
     }
 }

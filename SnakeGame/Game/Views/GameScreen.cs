@@ -11,6 +11,7 @@ namespace SnakeGame.Game.Views
         private readonly Food _food;
         private readonly GenerateFood _generateFood;
         private readonly EndGame _endGame;
+        private readonly GameDifficulty _gameDifficult;
         private readonly System.Windows.Forms.Timer _timer;
 
         public GameScreen()
@@ -23,6 +24,7 @@ namespace SnakeGame.Game.Views
             _food = new(200, 200);
             _generateFood = new(_snake, _food, CountFood);
             _endGame = new(_snake, this);
+            _gameDifficult = new(_snake, CountFood);
             _timer = new()
             {
                 Interval = 10
@@ -56,6 +58,7 @@ namespace SnakeGame.Game.Views
             _automaticMovement.MoveAutomatically();
             _generateFood.Generate();
             _endGame.End();
+            _gameDifficult.IncreasingDifficulty();
         }
     }
 }
