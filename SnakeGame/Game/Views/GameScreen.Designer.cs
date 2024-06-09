@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             Map = new PictureBox();
             Score = new Label();
-            label1 = new Label();
+            CountFood = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)Map).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -57,16 +57,16 @@
             Score.TabIndex = 1;
             Score.Text = "Score: 0";
             // 
-            // label1
+            // CountFood
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(283, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(39, 29);
-            label1.TabIndex = 2;
-            label1.Text = "32";
+            CountFood.AutoSize = true;
+            CountFood.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            CountFood.ForeColor = Color.White;
+            CountFood.Location = new Point(283, 9);
+            CountFood.Name = "CountFood";
+            CountFood.Size = new Size(26, 29);
+            CountFood.TabIndex = 2;
+            CountFood.Text = "0";
             // 
             // pictureBox1
             // 
@@ -84,7 +84,7 @@
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(334, 311);
             Controls.Add(pictureBox1);
-            Controls.Add(label1);
+            Controls.Add(CountFood);
             Controls.Add(Score);
             Controls.Add(Map);
             ForeColor = SystemColors.ControlText;
@@ -104,7 +104,7 @@
 
         private PictureBox Map;
         private Label Score;
-        private Label label1;
+        private Label CountFood;
         private PictureBox pictureBox1;
     }
 }

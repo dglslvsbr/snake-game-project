@@ -16,7 +16,7 @@
         }
 
         public List<Snake> List() => _segments;
-        public int Size => _size;
+        public static int Size => _size;
         public Image Image => _image;
         public void MoveUp() => Y--;
         public void MoveDown() => Y++;
