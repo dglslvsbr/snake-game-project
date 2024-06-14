@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>48xSnake.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="48xSnake.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Update="Utility\Ico\256xSnake.ico">

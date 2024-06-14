@@ -69,7 +69,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(64, 64, 64);
+            BackColor = Color.Navy;
             ClientSize = new Size(334, 311);
             Controls.Add(pictureBox1);
             Controls.Add(CountFood);

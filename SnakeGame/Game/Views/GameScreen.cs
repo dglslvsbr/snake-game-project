@@ -4,7 +4,10 @@ using SnakeGame.Game.Entities;
 namespace SnakeGame.Game.Views
 {
     public partial class GameScreen : Form
-    { 
+    {
+        public const int MapWidth = 329;
+        public const int MapHeight = 268;
+
         private readonly Snake _snake;
         private readonly Movement _movement;
         private readonly AutomaticMovement _automaticMovement;
@@ -58,7 +61,7 @@ namespace SnakeGame.Game.Views
             _automaticMovement.MoveAutomatically();
             _generateFood.Generate();
             _endGame.End();
-            _gameDifficult.IncreasingDifficulty();
+            _gameDifficult.VerifyScore();
         }
     }
 }

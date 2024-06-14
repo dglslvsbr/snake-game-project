@@ -1,4 +1,5 @@
 ﻿using SnakeGame.Game.Entities;
+using SnakeGame.Game.Views;
 
 namespace SnakeGame.Game.Controllers
 {
@@ -7,8 +8,6 @@ namespace SnakeGame.Game.Controllers
         private readonly Snake _snake;
         private readonly Food _food;
         private readonly Label _score;
-        private const int MapWidth = 329;
-        private const int MapHeight = 268;
         private const int Size = 20;
 
         public GenerateFood(Snake snake, Food food, Label foods)
@@ -34,8 +33,8 @@ namespace SnakeGame.Game.Controllers
                 {
                     do
                     {
-                        x = random.Next(MapWidth - Size);
-                        y = random.Next(MapHeight - Size);
+                        x = random.Next(GameScreen.MapWidth - Size);
+                        y = random.Next(GameScreen.MapHeight - Size);
                     } while (IsPositionOnSnake(x, y));
 
                     IncreaseFood();

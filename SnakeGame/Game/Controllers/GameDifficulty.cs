@@ -6,26 +6,35 @@ namespace SnakeGame.Game.Controllers
     {
         private readonly Snake _snake;
         private readonly Label _score;
-        
+        private int score;
+        private int Difficulty = 5;
+
         public GameDifficulty(Snake snake, Label score)
         {
             _snake = snake;
             _score = score;
         }
 
-        public void IncreasingDifficulty()
+        public void VerifyScore()
         {
-            if (int.TryParse(_score.Text, out int score))
+            if (int.TryParse(_score.Text, out score))
             {
-                if (score >= 30)
-                {
-                    _snake.Speed = 3;
-                }
-                else if (score >= 15)
-                {
-                    _snake.Speed = 2;
-                }
+                IncreaseDifficulty();
             }
+        }
+
+        private void IncreaseDifficulty()
+        {
+            if (score > Difficulty)
+            {
+                AdjustingSpeed();
+                Difficulty += 5;
+            }
+        }
+
+        private void AdjustingSpeed()
+        {
+            _snake.Speed += 0.1f;
         }
     }
 }
